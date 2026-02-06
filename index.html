@@ -16,30 +16,32 @@
         <h1 class="text-6xl font-bold text-prime-gold mb-4">PRIME</h1>
         <p class="text-xl tracking-widest uppercase mb-8">Institute of Legal Excellence</p>
 
-        <div class="max-w-md bg-white text-navy-900 p-8 rounded-lg shadow-2xl border-t-4 border-prime-gold">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">THE VERDICT CHALLENGE</h2>
+        <div class="max-w-md bg-white text-navy-900 p-8 rounded-lg shadow-2xl border-t-4 border-prime-gold text-left">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">THE VERDICT CHALLENGE</h2>
             <p class="text-gray-600 mb-6">A handwritten will is found from 2024. A typed but unsigned will is found from 2025. Which one stands in court?</p>
             
-            <form action="https://formspree.io/f/xjgevkpw" method="POST" class="space-y-4">
-                <input type="text" name="name" placeholder="Full Name" required class="w-full p-3 border rounded text-black">
+            <form action="https://formspree.io/f/xjgevkpw" method="POST" id="primeForm" class="space-y-4">
+                <input type="text" name="name" placeholder="Student Name" required class="w-full p-3 border rounded text-black">
                 <input type="tel" name="phone" placeholder="WhatsApp Number" required class="w-full p-3 border rounded text-black">
                 <select name="answer" class="w-full p-3 border rounded text-black">
                     <option value="A">Will A (Handwritten)</option>
                     <option value="B">Will B (Typed)</option>
                 </select>
                 <button type="submit" class="w-full bg-prime-navy text-prime-gold font-bold py-3 rounded hover:bg-black transition">
-                    SUBMIT MY VERDICT
+                    SUBMIT VERDICT & GET ROADMAP
                 </button>
             </form>
         </div>
     </div>
+
+    <script>
+        const form = document.getElementById('primeForm');
+        form.onsubmit = function() {
+            // Wait 1.5 seconds for Formspree to capture the data, then jump to WhatsApp
+            setTimeout(() => {
+                window.location.href = "https://wa.me/916291861796?text=Hi%20PRIME!%20I%20have%20submitted%20my%20verdict.%20Please%20send%20me%20the%20NLU%20Roadmap.";
+            }, 1500);
+        };
+    </script>
 </body>
 </html>
-<div class="mt-6 text-center">
-    <p class="text-sm text-gray-400 mb-2">Or talk to a Dean directly:</p>
-    <a href="https://wa.me/916291861796?text=Hi%20PRIME%20I%20have%20a%20legal%20query" 
-       class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full transition">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="w-5 h-5 mr-2">
-        Chat with PRIME Admissions
-    </a>
-</div>
