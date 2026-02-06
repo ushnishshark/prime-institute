@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRIME Institute - The Verdict Challenge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .bg-prime-navy { background-color: #001f3f; }
+        .text-prime-gold { color: #D4AF37; }
+        .border-prime-gold { border-color: #D4AF37; }
+    </style>
+</head>
+<body class="bg-prime-navy text-white font-sans">
+    <div class="min-h-screen flex flex-col items-center justify-center p-6 text-center">
+        <h1 class="text-6xl font-bold text-prime-gold mb-4">PRIME</h1>
+        <p class="text-xl tracking-widest uppercase mb-8">Institute of Legal Excellence</p>
+
+        <div class="max-w-md bg-white text-navy-900 p-8 rounded-lg shadow-2xl border-t-4 border-prime-gold">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">THE VERDICT CHALLENGE</h2>
+            <p class="text-gray-600 mb-6">A handwritten will is found from 2024. A typed but unsigned will is found from 2025. Which one stands in court?</p>
+            
+            <form action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST" class="space-y-4">
+                <input type="text" name="name" placeholder="Full Name" required class="w-full p-3 border rounded text-black">
+                <input type="tel" name="phone" placeholder="WhatsApp Number" required class="w-full p-3 border rounded text-black">
+                <select name="answer" class="w-full p-3 border rounded text-black">
+                    <option value="A">Will A (Handwritten)</option>
+                    <option value="B">Will B (Typed)</option>
+                </select>
+                <button type="submit" class="w-full bg-prime-navy text-prime-gold font-bold py-3 rounded hover:bg-black transition">
+                    SUBMIT MY VERDICT
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
