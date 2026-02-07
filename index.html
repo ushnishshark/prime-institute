@@ -1,47 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRIME Institute - The Verdict Challenge</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .bg-prime-navy { background-color: #001f3f; }
-        .text-prime-gold { color: #D4AF37; }
-        .border-prime-gold { border-color: #D4AF37; }
-    </style>
-</head>
-<body class="bg-prime-navy text-white font-sans">
-    <div class="min-h-screen flex flex-col items-center justify-center p-6 text-center">
-        <h1 class="text-6xl font-bold text-prime-gold mb-4">PRIME</h1>
-        <p class="text-xl tracking-widest uppercase mb-8">Best Results Since 1991</p>
-
-        <div class="max-w-md bg-white text-navy-900 p-8 rounded-lg shadow-2xl border-t-4 border-prime-gold text-left">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4 text-center">THE VERDICT CHALLENGE</h2>
-            <p class="text-gray-600 mb-6">A handwritten will is found from 2024. A typed but unsigned will is found from 2025. Which one stands in court?</p>
-            
-            <form action="https://formspree.io/f/xjgevkpw" method="POST" id="primeForm" class="space-y-4">
-                <input type="text" name="name" placeholder="Student Name" required class="w-full p-3 border rounded text-black">
-                <input type="tel" name="phone" placeholder="WhatsApp Number" required class="w-full p-3 border rounded text-black">
-                <select name="answer" class="w-full p-3 border rounded text-black">
-                    <option value="A">Will A (Handwritten)</option>
-                    <option value="B">Will B (Typed)</option>
-                </select>
-                <button type="submit" class="w-full bg-prime-navy text-prime-gold font-bold py-3 rounded hover:bg-black transition">
-                    SUBMIT VERDICT & GET ROADMAP
-                </button>
-            </form>
-        </div>
-    </div>
-
-    <script>
-        const form = document.getElementById('primeForm');
-        form.onsubmit = function() {
-            // Wait 1.5 seconds for Formspree to capture the data, then jump to WhatsApp
-            setTimeout(() => {
-                window.location.href = "https://wa.me/916291861796?text=Hi%20PRIME!%20I%20have%20submitted%20my%20verdict.%20Please%20send%20me%20the%20NLU%20Roadmap.";
-            }, 1500);
-        };
-    </script>
-</body>
-</html>
+<script>
+  const form = document.querySelector('form');
+  form.onsubmit = function() {
+    // 1.5 second delay to ensure Formspree captures the lead data first
+    setTimeout(() => {
+      const message = "Greetings PRIME! ⚖️ I've submitted my verdict. I am very interested in the Elite 20 batch for CLAT preparation. Could you please share the fee structure and schedule a brief counseling call to discuss my CLAT roadmap?";
+      window.location.href = "https://wa.me/919830204498?text=" + encodeURIComponent(message);
+    }, 1500);
+  };
+</script>
